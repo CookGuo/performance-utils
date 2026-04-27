@@ -1,0 +1,61 @@
+{
+  "name": "performance-utils",
+  "version": "0.1.0",
+  "description": "Web front-end performance utility methods for INP task splitting, LCP resource hints, and RUM metrics.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "web-vitals": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "web-vitals": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "web-vitals": "^4.2.0"
+  },
+  "keywords": [
+    "performance",
+    "web-vitals",
+    "inp",
+    "lcp",
+    "cls",
+    "long-task"
+  ]
+}
